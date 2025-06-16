@@ -12,7 +12,7 @@
         WindowStartupLocation="Manual"
         ResizeMode="NoResize"
         Topmost="True">
-    <Border Background="#FF1E1E1E" CornerRadius="10">
+    <Border Background="#EE1E1E1E" CornerRadius="10">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"></RowDefinition>
@@ -32,7 +32,7 @@
                 <Rectangle x:Name="EnergyBar"
                            Width="150" 
                            Height="35" 
-                           Fill="#FF00FF00"
+                           Fill="#EE00FF00"
                            VerticalAlignment="Bottom"
                            HorizontalAlignment="Left"
                            RadiusX="10"

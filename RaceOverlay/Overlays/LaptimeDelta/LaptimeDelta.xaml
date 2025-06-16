@@ -14,7 +14,7 @@
         WindowStartupLocation="Manual"
         ResizeMode="NoResize"
         Topmost="True">
-    <Border Background="#FF1E1E1E" CornerRadius="10">
+    <Border Background="#EE1E1E1E" CornerRadius="10">
         <Grid>
             <Grid.LayoutTransform>
                 <ScaleTransform x:Name="ContentScaleTransform" ScaleX="1" ScaleY="1" />
@@ -27,17 +27,17 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle Grid.Column="0" Grid.ColumnSpan="2" Width="300" RadiusX="10" RadiusY="10"
                            Height="30" 
-                           Fill="#FF2A2A2A"/>  
+                           Fill="#EE2A2A2A"/>  
                 <Rectangle Grid.Column="0" x:Name="DeltaBarPositive" RadiusX="10" RadiusY="10"
                            Width="0" 
                            Height="30" 
-                           Fill="#FFFF0000"
+                           Fill="#EEFF0000"
                            VerticalAlignment="Bottom"
                            HorizontalAlignment="Right"/>
                 <Rectangle Grid.Column="1" x:Name="DeltaBarNegative" RadiusX="10" RadiusY="10"
                            Width="75" 
                            Height="30" 
-                           Fill="#FF009900"
+                           Fill="#EE009900"
                            VerticalAlignment="Bottom"
                            HorizontalAlignment="Left"/>
                 <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Name="DeltaText"
