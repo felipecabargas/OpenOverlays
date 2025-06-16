@@ -14,7 +14,7 @@
         WindowStartupLocation="Manual"
         ResizeMode="NoResize"
         Topmost="True">
-    <Border Background="#FF1E1E1E" CornerRadius="10">
+    <Border Background="#EE1E1E1E" CornerRadius="10">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -62,7 +62,7 @@
             <Grid Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Background="#FF0000FF"
+                    Background="#EE0000FF"
                     Width="100" Height="40"
                     Name="IsWetBorder"
                     >

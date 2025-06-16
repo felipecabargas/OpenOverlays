@@ -8,7 +8,7 @@
         WindowStartupLocation="Manual"
         ResizeMode="NoResize"
         Topmost="True">
-    <Border CornerRadius="10" Background="#FF1E1E1E">
+    <Border CornerRadius="10" Background="#EE1E1E1E">
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

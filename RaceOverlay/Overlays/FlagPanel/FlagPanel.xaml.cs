@@ -26,7 +26,8 @@ public partial class FlagPanel : Overlay
         Thread updateThread = new Thread(UpdateThreadMethod);
         
         updateThread.IsBackground = true;
-        updateThread.Start();
+        //updateThread.Start();
+        SetBlue();
     }
 
     public override void _updateWindow()
@@ -154,17 +155,19 @@ public partial class FlagPanel : Overlay
 
     private void SetGreen()
     {
+        FlagCanvas.Background = Brushes.Lime;
+        FlagCanvas.Opacity = 0.7;
         CheckeredFlag.Visibility = Visibility.Collapsed;
         DsqFlag.Visibility = Visibility.Collapsed;
         FlagCanvas.Visibility = Visibility.Visible;
         DebrisFlag.Visibility = Visibility.Collapsed;
         RepairFlag.Visibility = Visibility.Collapsed;
-        FlagCanvas.Background = Brushes.Lime;
     }
 
     private void SetRed()
     {
         FlagCanvas.Background = Brushes.Red;
+        FlagCanvas.Opacity = 0.7;
         CheckeredFlag.Visibility = Visibility.Collapsed;
         DsqFlag.Visibility = Visibility.Collapsed;
         FlagCanvas.Visibility = Visibility.Visible;
@@ -175,6 +178,7 @@ public partial class FlagPanel : Overlay
     private void SetYellow()
     {
         FlagCanvas.Background = Brushes.Yellow;
+        FlagCanvas.Opacity = 0.7;
         CheckeredFlag.Visibility = Visibility.Collapsed;
         DsqFlag.Visibility = Visibility.Collapsed;
         FlagCanvas.Visibility = Visibility.Visible;
@@ -185,6 +189,7 @@ public partial class FlagPanel : Overlay
     private void SetBlue()
     {
         FlagCanvas.Background = Brushes.Blue;
+        FlagCanvas.Opacity = 0.7;
         CheckeredFlag.Visibility = Visibility.Collapsed;
         DsqFlag.Visibility = Visibility.Collapsed;
         FlagCanvas.Visibility = Visibility.Visible;
@@ -195,6 +200,7 @@ public partial class FlagPanel : Overlay
     private void SetWhite()
     {
         FlagCanvas.Background = Brushes.White;
+        FlagCanvas.Opacity = 0.7;
         CheckeredFlag.Visibility = Visibility.Collapsed;
         DsqFlag.Visibility = Visibility.Collapsed;
         FlagCanvas.Visibility = Visibility.Visible;
@@ -205,6 +211,7 @@ public partial class FlagPanel : Overlay
     private void SetBlack()
     {
         FlagCanvas.Background = Brushes.Black;
+        FlagCanvas.Opacity = 0.7;
         CheckeredFlag.Visibility = Visibility.Collapsed;
         DsqFlag.Visibility = Visibility.Collapsed;
         FlagCanvas.Visibility = Visibility.Visible;
@@ -215,6 +222,7 @@ public partial class FlagPanel : Overlay
     private void SetCheckered()
     {
         CheckeredFlag.Visibility = Visibility.Visible;
+        CheckeredFlag.Opacity = 0.7;
         DsqFlag.Visibility = Visibility.Collapsed;
         FlagCanvas.Visibility = Visibility.Collapsed;
         DebrisFlag.Visibility = Visibility.Collapsed;
@@ -225,6 +233,7 @@ public partial class FlagPanel : Overlay
     {
         CheckeredFlag.Visibility = Visibility.Collapsed;
         DsqFlag.Visibility = Visibility.Visible;
+        DsqFlag.Opacity = 0.7;
         FlagCanvas.Visibility = Visibility.Collapsed;
         DebrisFlag.Visibility = Visibility.Collapsed;
         RepairFlag.Visibility = Visibility.Collapsed;
@@ -237,6 +246,7 @@ public partial class FlagPanel : Overlay
         FlagCanvas.Visibility = Visibility.Collapsed;
         DebrisFlag.Visibility = Visibility.Collapsed;
         RepairFlag.Visibility = Visibility.Visible;
+        RepairFlag.Opacity = 0.7;
     }
     
     private void SetDebris()
@@ -245,6 +255,7 @@ public partial class FlagPanel : Overlay
         DsqFlag.Visibility = Visibility.Collapsed;
         FlagCanvas.Visibility = Visibility.Collapsed;
         DebrisFlag.Visibility = Visibility.Visible;
+        DebrisFlag.Opacity = 0.7;
         RepairFlag.Visibility = Visibility.Collapsed;
     }
 }
