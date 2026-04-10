@@ -23,7 +23,7 @@ jobs:
         run: dotnet restore
 
       - name: Build
-        run: dotnet publish RaceOverlay --configuration Release --self-contained true --runtime win-x64 -p:PublishSingleFile=true
+        run: dotnet publish OpenOverlays --configuration Release --self-contained true --runtime win-x64 -p:PublishSingleFile=true
 
       - name: Get tag version
         id: get_version
@@ -32,27 +32,27 @@ jobs:
 
       - name: Calculate checksums
         run: |
-          $filePath = "RaceOverlay\bin\Release\net9.0-windows\win-x64\publish\RaceOverlay.exe"
+          $filePath = "OpenOverlays\bin\Release\net9.0-windows\win-x64\publish\OpenOverlays.exe"
           $hash = Get-FileHash -Path $filePath -Algorithm SHA256
-          $checksumContent = "SHA256: $($hash.Hash) - RaceOverlay.exe"
+          $checksumContent = "SHA256: $($hash.Hash) - OpenOverlays.exe"
           $checksumContent | Out-File -FilePath "checksum.txt" -Encoding utf8
           Write-Output "Checksum calculated and saved to checksum.txt"
         shell: pwsh
 
       - name: Test directory contents
         run: |
-          dir RaceOverlay\bin\Release\net9.0-windows\win-x64\publish\
+          dir OpenOverlays\bin\Release\net9.0-windows\win-x64\publish\
           dir *.txt
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          name: RaceOverlay ${{ steps.get_version.outputs.VERSION }}
+          name: OpenOverlays ${{ steps.get_version.outputs.VERSION }}
           draft: false
           prerelease: false
           files: |
-            RaceOverlay/bin/Release/net9.0-windows/win-x64/publish/RaceOverlay.exe
+            OpenOverlays/bin/Release/net9.0-windows/win-x64/publish/OpenOverlays.exe
             checksum.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
