@@ -1,6 +1,9 @@
-# Race Overlay
+# OpenOverlays
 
-Race Overlay is an Open Source alternative of Race Labs for iRacing Overlays. The Core of the project will be general 
+> [!IMPORTANT]
+> **[RaceOverlay](https://github.com/RaceOverlay/RaceOverlay)** is no longer actively maintained. **OpenOverlays** is a community-driven fork intended to continue its development and support.
+
+OpenOverlays is an Open Source alternative of Race Labs for iRacing Overlays. The Core of the project will be general 
 car and track information which is usable on most cars and tracks.
 
 ## Currently available overlays
